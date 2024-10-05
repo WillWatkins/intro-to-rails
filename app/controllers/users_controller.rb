@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
-    def new 
+    def new
         @user = User.new
     end
 
@@ -16,12 +16,12 @@ class UsersController < ApplicationController
 
         if @user.save
             redirect_to @user
-        else 
+        else
             render :new, status: :unprocessable_entity
         end
     end
 
-    private 
+    private
         def user_params
             params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :display_name)
         end

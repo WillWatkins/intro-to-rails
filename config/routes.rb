@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   root "users#index"
 
   # get "/user", to: "users"
-  resources :users 
+  resources :users
 end
